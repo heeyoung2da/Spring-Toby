@@ -7,7 +7,7 @@ import java.sql.*;
 public class UserDao {
 	public void add(User user) throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection c = DriverManager.getConnection("jdbc:mysql://localhost/springbook", "spring", "book");
+		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/springbook", "root", "1234");
 
 		PreparedStatement ps = c.prepareStatement(
 				"insert into users(id, name, password) values (?,?,?)");
